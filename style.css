@@ -32,3 +32,23 @@
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  min-height: 100dvh;
+  
+}
+.card {
+  width: 500px;
+  height: 384px;
+  margin: auto;
+  vertical-align: middle;
+}
+footer {
+  position: fixed;
+  bottom: 0.8rem;
+  width: 100%;
+}
