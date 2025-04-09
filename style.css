@@ -23,6 +23,7 @@
 /* Default font Figtree (or sans-serif if N/A), normal font-weight, 14px, 150% line-height */
   font: normal 14px/150% Figtree, sans-serif;
   letter-spacing: 0;
+  color: var(--gray-950);
 }
 
 .attribution {
@@ -39,16 +40,34 @@ main {
   align-items: center;
   height: 100vh;
   min-height: 100dvh;
-  
+  background-color: var(--yellow);
 }
 .card {
-  width: 500px;
-  height: 384px;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--sp-300);
+  background-color: var(--white);
+  width: 327px; /* mobile-first width */
+  height: 501px; /* mobile-first height */
   margin: auto;
   vertical-align: middle;
+  padding: var(--sp-300);
+  border-radius: 20px;
 }
 footer {
   position: fixed;
   bottom: 0.8rem;
   width: 100%;
+}
+.blog-image {
+  border-radius: 10px;
+  height: 200px;
+  width: 279px;
+  overflow: hidden;
+}
+.blog-image img{
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
