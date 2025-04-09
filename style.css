@@ -1,3 +1,30 @@
+/* Import Figtree Google font */
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Outfit:wght@100..900&display=swap');
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  letter-spacing: 0;
+  line-height: 150%;
+}
+:root {
+  /* Color variables */
+  --yellow  : #F4D04E;
+  --gray-950: #111111;
+  --gray-500: #6B6B6B;
+  --white   : #FFFFFF;
+  /* Spacing variables */
+  --sp-300: 24px;
+  --sp-150: 12px;
+  --sp-100:  8px;
+  --sp-50 :  4px;
+  
+/* Default font Figtree (or sans-serif if N/A), normal font-weight, 14px, 150% line-height */
+  font: normal 14px/150% Figtree, sans-serif;
+  letter-spacing: 0;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
