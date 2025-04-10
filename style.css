@@ -48,11 +48,16 @@ main {
   gap: var(--sp-300);
   background-color: var(--white);
   width: 327px; /* mobile-first width */
-  height: 501px; /* mobile-first height */
+  /* height: 501px; mobile-first height */
   margin: auto;
   vertical-align: middle;
   padding: var(--sp-300);
   border-radius: 20px;
+}
+.blog-info {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--sp-150);
 }
 footer {
   position: fixed;
@@ -70,4 +75,10 @@ footer {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.tag {
+  width: fit-content;
+  padding: var(--sp-50) var(--sp-150);
+  background-color: var(--yellow);
+  border-radius: var(--sp-50);
 }
