@@ -1,5 +1,13 @@
 /* Import Figtree Google font */
-@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Outfit:wght@100..900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Outfit:wght@100..900&display=swap'); */
+
+@font-face {
+  font-family: 'Figtree';
+  src: url('./assets/fonts/Figtree-VariableFont_wght.ttf')  format('truetype');
+  font-weight: 500 800; 
+  font-style: normal;
+  font-display: swap; 
+}
 
 *, *::before, *::after {
   margin: 0;
@@ -23,17 +31,20 @@
   
   /* Typography variables */
 
-  /* H1 blog title desktop */
-  --text-preset-1: 800 24px/150% Figtree, sans-serif;
+  /* H1 blog title desktop*/
+  --text-preset-1: 800 24px/150% Figtree, sans-serif; 
+
   /* description paragraph */
   --text-preset-2: 500 16px/150% Figtree, sans-serif;
-  /* publish date */
+
+  /* publish date  */
   --text-preset-3: 500 14px/150% Figtree, sans-serif;
-  /* tag and author name */
+
+  /* tag and author name  */
   --text-preset-3b: 800 14px/150% Figtree, sans-serif;
 
 /* Default font Figtree (or sans-serif if N/A), normal font-weight, 14px, 150% line-height */
-  font: normal 14px/150% Figtree, sans-serif;
+  font: var(--text-preset-3);
   letter-spacing: 0;
   color: var(--gray-950);
 }
