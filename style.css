@@ -21,9 +21,14 @@
   --sp-50 :  4px;
   --minus: 0px;
   /* Typography variables */
+
+  /* H1 blog title desktop */
   --text-preset-1: 800 24px/150% Figtree, sans-serif;
+  /* description paragraph */
   --text-preset-2: 500 16px/150% Figtree, sans-serif;
+  /* publish date */
   --text-preset-3: 500 14px/150% Figtree, sans-serif;
+  /* tag and author name */
   --text-preset-3b: 800 14px/150% Figtree, sans-serif;
 
 /* Default font Figtree (or sans-serif if N/A), normal font-weight, 14px, 150% line-height */
@@ -31,7 +36,6 @@
   letter-spacing: 0;
   color: var(--gray-950);
 }
-
 .attribution {
   font-size: 1rem;
   font-weight: 500;
@@ -40,14 +44,17 @@
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
-
+body {
+  min-height: 580px;
+  min-width: max-content;
+  background-color: var(--yellow);
+  position: relative;
+}
 main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  min-height: 100dvh;
-  background-color: var(--yellow);
+  min-height: 100vh;
 }
 .card {
   display: flex;
@@ -60,6 +67,7 @@ main {
   padding: var(--sp-300);
   border-radius: 20px;
   border: 1px solid var(--gray-950);
+  box-shadow: 8px 8px 0 black;
 }
 .blog-info {
   display: flex;
@@ -67,8 +75,8 @@ main {
   gap: var(--sp-150);
 }
 footer {
-  position: fixed;
-  bottom: 0.8rem;
+  position: absolute;
+  bottom: 0.5rem;
   width: 100%;
 }
 .blog-image {
@@ -94,6 +102,15 @@ footer {
 }
 h1 {
   font: var(--text-preset-1);
+  transition: all 0.3s;
+}
+h1:hover {
+  transition: all 0.3s;
+  cursor: pointer;
+  color: var(--yellow);
+}
+h1:active {
+  cursor: grabbing;
 }
 .description {
   font: var(--text-preset-2);
@@ -107,12 +124,17 @@ div.blog-author {
 .blog-author-pic {
   width: 32px;
   height: 32px;
+  border-radius: 50%;
 }
 .blog-author-name {
   font: var(--text-preset-3b);
 }
 
-@media screen and (max-width: 375px){
+/* mobile */
+@media screen and (max-width: 500px){
+  .card {
+    width: 327px; 
+  }
   .tag,
   .publish-date {
     font-size: 12px;
@@ -120,8 +142,7 @@ div.blog-author {
   h1 {
     font-size: 20px;
   }
-  .description{
+  .description {
     font-size: 14px;
-    color: red;
   }
 }
