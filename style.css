@@ -19,7 +19,13 @@
   --sp-150: 12px;
   --sp-100:  8px;
   --sp-50 :  4px;
-  
+  --minus: 0px;
+  /* Typography variables */
+  --text-preset-1: 800 24px/150% Figtree, sans-serif;
+  --text-preset-2: 500 16px/150% Figtree, sans-serif;
+  --text-preset-3: 500 14px/150% Figtree, sans-serif;
+  --text-preset-3b: 800 14px/150% Figtree, sans-serif;
+
 /* Default font Figtree (or sans-serif if N/A), normal font-weight, 14px, 150% line-height */
   font: normal 14px/150% Figtree, sans-serif;
   letter-spacing: 0;
@@ -27,7 +33,8 @@
 }
 
 .attribution {
-  font-size: 11px;
+  font-size: 1rem;
+  font-weight: 500;
   text-align: center;
 }
 .attribution a {
@@ -47,12 +54,12 @@ main {
   flex-flow: column nowrap;
   gap: var(--sp-300);
   background-color: var(--white);
-  width: 327px; /* mobile-first width */
-  /* height: 501px; mobile-first height */
+  width: 384px; /* desktop-first width */
   margin: auto;
   vertical-align: middle;
   padding: var(--sp-300);
   border-radius: 20px;
+  border: 1px solid var(--gray-950);
 }
 .blog-info {
   display: flex;
@@ -67,7 +74,6 @@ footer {
 .blog-image {
   border-radius: 10px;
   height: 200px;
-  width: 279px;
   overflow: hidden;
 }
 .blog-image img{
@@ -81,4 +87,41 @@ footer {
   padding: var(--sp-50) var(--sp-150);
   background-color: var(--yellow);
   border-radius: var(--sp-50);
+  font: var(--text-preset-3b);
+}
+.publish-date {
+  font: var(--text-preset-3);
+}
+h1 {
+  font: var(--text-preset-1);
+}
+.description {
+  font: var(--text-preset-2);
+  color: var(--gray-500);
+}
+div.blog-author {
+  display: flex;
+  gap: var(--sp-150);
+  place-items: center flex-start;
+}
+.blog-author-pic {
+  width: 32px;
+  height: 32px;
+}
+.blog-author-name {
+  font: var(--text-preset-3b);
+}
+
+@media screen and (max-width: 375px){
+  .tag,
+  .publish-date {
+    font-size: 12px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  .description{
+    font-size: 14px;
+    color: red;
+  }
 }
